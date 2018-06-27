@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Firebase Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Train Schedule</a>
+          </div>
+        </nav>
+    </header>
+    <div class='container'>
+        <div class='row'>
+            <div class='box col l12 s12 m12' id='schedge'>
+                <div class='row'>
+                    <div class='col l12 s12 m12 boxHead'>
+                        <h2>Train Schedule</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col l12 s12 m12'>
+                        <table>
+                          <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                          </thead>
+                    
+                          <tbody id='schedgeTable'>
+                    
+                          </tbody>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='box col l12 m12 s12'>
+                <div class='row'>
+                    <div class='boxHead col l12 m12 s12'>
+                        <h2>Add Train</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <form class='col l12 m12 s12'>
+                        <div class='row'>
+                            <div class="input-field col s12 m12 l12">
+                              <input id="trainName" type="text" class="validate">
+                              <label for="trainName">Train Name</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class="input-field col s12 m12 l12">
+                              <input id="destination" type="text" class="validate">
+                              <label for="destination">Destination</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class="input-field col s12 m12 l12">
+                              <input id="firstTime" type="text" class="validate">
+                              <label for="firstTime">First Train Time (HH:mm - Military time)</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class="input-field col s12 m12 l12">
+                              <input id="frequency" type="number" class="validate">
+                              <label for="frequency">Frequency (min)</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <input type='submit' class='waves-effect waves-light btn' id='submitBtn'>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+</body>
+</html>
